@@ -38,3 +38,7 @@
  这样密钥就基本生成了，不过这样密钥对的私钥是无法在代码中直接使用的，要想使用它需要借助RSAPrivateKeyStructure这个类，java是不自带的。所以为了方便使用，我们需要对私钥进行PKCS#8编码，
  
  命令如下：pkcs8 -topk8 -in rsa_private_key.pem -out pkcs8_rsa_private_key.pem -nocrypt 
+ 
+ 
+ http://blog.csdn.net/bbld_/article/details/38777491
+ 
