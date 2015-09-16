@@ -6,6 +6,8 @@
 # 使用
 ####秘钥对的生成
 
+#####1、我们可以在代码里随机生成密钥对
+
 ###### 
     /** 
      * 随机生成RSA密钥对 
@@ -28,3 +30,11 @@
             return null;  
         }  
     }  
+#####2、通过OpenSSl工具生成密钥对
+
+生成私钥：genrsa -out rsa_private_key.pem 1024 
+生成公钥：rsa -in rsa_private_key.pem -out rsa_public_key.pem -pubout
+
+ 这样密钥就基本生成了，不过这样密钥对的私钥是无法在代码中直接使用的，要想使用它需要借助RSAPrivateKeyStructure这个类，java是不自带的。所以为了方便使用，我们需要对私钥进行PKCS#8编码，
+ 
+ 命令如下：pkcs8 -topk8 -in rsa_private_key.pem -out pkcs8_rsa_private_key.pem -nocrypt 
