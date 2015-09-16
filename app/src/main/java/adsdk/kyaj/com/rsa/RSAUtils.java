@@ -20,10 +20,6 @@ import java.security.spec.X509EncodedKeySpec;
 
 import javax.crypto.Cipher;
 
-/**
- * @author Mr.Zheng
- * @date 2014年8月22日 下午1:44:23
- */
 public final class RSAUtils
 {
 	private static String RSA = "RSA";
@@ -66,7 +62,7 @@ public final class RSAUtils
 	 * 
 	 * @param data
 	 *            需加密数据的byte数据
-	 * @param pubKey
+	 * @param pubKeys
 	 *            公钥
 	 * @return 加密后的byte型数据
 	 */

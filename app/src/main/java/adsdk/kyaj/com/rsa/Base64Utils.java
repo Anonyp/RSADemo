@@ -2,10 +2,6 @@ package adsdk.kyaj.com.rsa;
 
 import java.io.UnsupportedEncodingException;
 
-/**
- * @author Mr.Zheng
- * @date 2014��8��22�� ����9:50:28
- */
 public class Base64Utils
 {
 	private static char[] base64EncodeChars = new char[]
@@ -22,8 +18,6 @@ public class Base64Utils
 			-1, -1, -1 };
 
 	/**
-	 * ����
-	 * 
 	 * @param data
 	 * @return
 	 */
@@ -62,8 +56,6 @@ public class Base64Utils
 	}
 
 	/**
-	 * ����
-	 * 
 	 * @param str
 	 * @return
 	 */
